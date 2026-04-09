@@ -97,7 +97,7 @@ class QuizGame:
 
     def show_menu(self):
         print("\n========================================")
-        print("🎯 나만의 퀴즈 게임 🎯")
+        print(" 나만의 퀴즈 게임 ")
         print("========================================")
         print("1. 퀴즈 풀기")
         print("2. 퀴즈 추가")
@@ -111,7 +111,7 @@ class QuizGame:
             print("등록된 퀴즈가 없습니다.")
             return
 
-        print(f"\n📝 퀴즈를 시작합니다! (총 {len(self.quizzes)}문제)")
+        print(f"\n 퀴즈를 시작합니다! (총 {len(self.quizzes)}문제)")
         score = 0
 
         for index, quiz in enumerate(self.quizzes, start=1):
@@ -124,21 +124,21 @@ class QuizGame:
                 score += 1
             else:
                 correct_answer_text = quiz.choices[quiz.answer - 1]
-                print(f"❌ 오답입니다. 정답은 {quiz.answer}번 ({correct_answer_text}) 입니다.")
+                print(f" 오답입니다. 정답은 {quiz.answer}번 ({correct_answer_text}) 입니다.")
 
         final_score = int((score / len(self.quizzes)) * 100)
         print("========================================")
-        print(f"🏆 결과: {len(self.quizzes)}문제 중 {score}문제 정답! ({final_score}점)")
+        print(f"결과: {len(self.quizzes)}문제 중 {score}문제 정답! ({final_score}점)")
 
         if final_score > self.best_score:
             self.best_score = final_score
             self.save_state()
-            print("🎉 새로운 최고 점수입니다!")
+            print("새로운 최고 점수입니다!")
 
         print("========================================")
 
     def add_quiz(self):
-        print("\n📌 새로운 퀴즈를 추가합니다.")
+        print("\n새로운 퀴즈를 추가합니다.")
 
         try:
             question = input("문제를 입력하세요: ").strip()
@@ -160,7 +160,7 @@ class QuizGame:
             self.quizzes.append(new_quiz)
             self.save_state()
 
-            print("✅ 퀴즈가 추가되었습니다!")
+            print("퀴즈가 추가되었습니다!")
 
         except KeyboardInterrupt:
             print("\n퀴즈 추가가 중단되었습니다.")
@@ -174,7 +174,7 @@ class QuizGame:
             print("등록된 퀴즈가 없습니다.")
             return
 
-        print(f"\n📋 등록된 퀴즈 목록 (총 {len(self.quizzes)}개)")
+        print(f"\n등록된 퀴즈 목록 (총 {len(self.quizzes)}개)")
         print("----------------------------------------")
         for i, quiz in enumerate(self.quizzes, start=1):
             print(f"[{i}] {quiz.question}")
@@ -184,7 +184,7 @@ class QuizGame:
         if self.best_score == 0:
             print("아직 기록된 최고 점수가 없습니다.")
         else:
-            print(f"🏆 최고 점수: {self.best_score}점")
+            print(f"최고 점수: {self.best_score}점")
 
     def run(self):
         while True:
