@@ -87,7 +87,7 @@ python3 main.py
        print("숫자로 입력해야 합니다.")
    ```
 
-8. 기본 퀴즈 5개 이상 포함 (평가기준 4)
+8. 기본 퀴즈 5개 이상 포함
 
    기본 퀴즈는 총 6개 이상 포함되어 있으며,
    프로그램 실행 시 자동으로 로드됩니다.
@@ -100,7 +100,7 @@ python3 main.py
 
    ***
 
-9. Git 커밋 내역 (평가기준 5)
+9. Git 커밋 내역
 
    총 10개 이상의 의미 있는 커밋을 수행하였습니다.
 
@@ -108,5 +108,27 @@ python3 main.py
    git log --oneline
    ```
 
-   ![quiz_list](./img/5/5-2.png)
-브랜치 테스트
+   ![quiz_list](./img/9/9-1.png)
+
+10. 브랜치 및 병합
+    브랜치를 생성하여 기능 개발 후 main 브랜치에 병합하였습니다.
+
+    ```bash
+    git checkout -b feature/quiz-play
+    git merge feature/quiz-play
+    ```
+
+    ![quiz_list](./img/9/9-3.png)
+
+11. clone / pull 실습
+
+프로젝트 완료 후 다음 과정을 수행하였습니다.
+
+1.  저장소 clone
+2.  파일 수정 후 push
+3.  기존 디렉토리에서 pull 수행
+
+```bash
+git clone https://github.com/L-jy16/quiz_game_python
+git pull
+```
