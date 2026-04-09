@@ -12,8 +12,8 @@
 - 개발 도구: Visual Studio Code, Terminal
 
 3. 수행 리스트
-   - [ ] 프로그램 실행됨 (`python main.py`)</br>
 
+- [✔] 프로그램 실행됨 (`python main.py`)</br>
 - [✔] 메뉴 정상 출력</br>
 - [✔] 퀴즈 풀기 가능</br>
 - [✔] 퀴즈 추가 가능</br>
