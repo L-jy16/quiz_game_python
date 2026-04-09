@@ -22,6 +22,7 @@ class QuizGame:
 
     def load_state(self):
         try:
+            # state.json이 있을 경우에 state.json파일을 만듦
             with open(self.state_file, "r", encoding="utf-8") as file:
                 data = json.load(file)
 
