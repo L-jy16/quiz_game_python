@@ -120,7 +120,7 @@ class QuizGame:
             user_answer = self.get_int_input("정답 입력 (1-4): ", 1, 4)
 
             if quiz.is_correct(user_answer):
-                print("✅ 정답입니다!")
+                print("정답입니다!")
                 score += 1
             else:
                 correct_answer_text = quiz.choices[quiz.answer - 1]
