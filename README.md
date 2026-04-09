@@ -96,7 +96,7 @@ python3 main.py
 
    또한 아래 화면에서 확인할 수 있습니다.
 
-   ![quiz_list](./img/5/5-2.png)
+   ![quiz_list](./img/5/5-1.png)
 
    ***
 
@@ -110,6 +110,8 @@ python3 main.py
 
    ![quiz_list](./img/9/9-1.png)
 
+   git log --oneline은 커밋 기록을 간단하게 한줄씩 확인할 수 있는 명령어 입니다.
+
 10. 브랜치 및 병합
     브랜치를 생성하여 기능 개발 후 main 브랜치에 병합하였습니다.
 
@@ -119,6 +121,10 @@ python3 main.py
     ```
 
     ![quiz_list](./img/9/9-3.png)
+
+    git checkout -b feature/quiz-play은 feature/quiz-play이라는 브랜치를 -b로 생성하고 checkout을 통해 브랜치로 이동하는 명령어입니다.</br> </br>
+
+    git merge feature/quiz-play은 merge를 통해 현재 브랜치에 eature/quiz-play 브랜치 내용을 병합하는 명령어입니다.
 
 11. clone / pull 실습
     프로젝트 완료 후 다음 과정을 수행하였습니다.
