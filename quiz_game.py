@@ -143,6 +143,8 @@ class QuizGame:
 
                 # 프로그램 종료
                 raise SystemExit
+            
+            
     # 메뉴 출력
     def show_menu(self):
         print("\n========================================")

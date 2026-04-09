@@ -171,6 +171,55 @@ python3 main.py
     2. 사용자 입력 오류
        사용자가 숫자를 입력하였는데 오류가 발생했습니다. 원인을 찾기가 힘들었습니다. 오류가 나고 다시 종료해서 다시켜 숫자를 입력했을 경우에는 성공하였습니다. 우연치 않게 다시 입력했을 때 실수로 공백을 넣고 입력했더니 같은 오류가 발생하여 원인을 찾게 되었습니다. 해결 방안으로는 공백과 문자 입력을 처리하고 범위를 검사하는 코드를 추가하여 보안했습니다.
 
+    ```python
+       def get_int_input(self, prompt, min_value, max_value):
+      # 올바른 값을 입력할 때까지 계속 반복
+      while True:
+          try:
+              # 사용자 입력을 받고, 앞뒤 공백을 제거함
+              user_input = input(prompt).strip()
+
+              # 아무것도 입력하지 않고 엔터만 누른 경우 처리
+              if user_input == "":
+                  print("빈 입력은 허용되지 않습니다. 다시 입력하세요.")
+                  # 다시 입력받기 위해 반복문의 처음으로 돌아감
+                  continue
+
+              # 입력값을 문자열에서 정수로 변환
+              number = int(user_input)
+
+              # 입력한 숫자가 허용 범위를 벗어난 경우 처리
+              if number < min_value or number > max_value:
+                  print(f"{min_value}부터 {max_value} 사이의 숫자를 입력하세요.")
+                  # 다시 입력받기 위해 반복문의 처음으로 돌아감
+                  continue
+
+              # 위의 모든 조건을 통과하면 올바른 숫자이므로 반환
+              return number
+
+          # 문자를 입력해서 숫자로 변환할 수 없는 경우 처리
+          except ValueError:
+              print("숫자로 입력해야 합니다. 다시 입력하세요.")
+
+          # 사용자가 Ctrl + C를 눌러 강제로 입력을 중단한 경우 처리
+          except KeyboardInterrupt:
+              print("\n입력이 중단되었습니다. 프로그램을 안전하게 종료합니다.")
+              # 종료 전에 현재 데이터를 저장
+              self.save_state()
+              # 프로그램 종료
+              raise SystemExit
+
+          # 입력 스트림이 종료된 경우 처리
+          # 예: Ctrl + D 같은 입력 종료 상황
+          except EOFError:
+              print("\n입력 스트림이 종료되었습니다. 프로그램을 안전하게 종료합니다.")
+              # 종료 전에 현재 데이터를 저장
+              self.save_state()
+
+              # 프로그램 종료
+              raise SystemExit
+    ```
+
 15. 생각하기
 
     1. JSON의 한계
