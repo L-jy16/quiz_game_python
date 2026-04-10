@@ -1,8 +1,5 @@
 class Quiz:
     # 객체가 생성될 때 실행되는 초기화 함수
-    # question = 문제 내용
-    # choices = 선택지 리스트
-    # answer = 정답 번호
     def __init__(self, question, choices, answer):
         self.question = question    # 문제
         self.choices = choices  # 선택지
