@@ -188,6 +188,7 @@ python3 main.py
       while True:
           try:
               # 사용자 입력을 받고, 앞뒤 공백을 제거함
+              # strip = 공백 제거
               user_input = input(prompt).strip()
 
               # 아무것도 입력하지 않고 엔터만 누른 경우 처리
