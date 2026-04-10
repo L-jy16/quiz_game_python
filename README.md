@@ -159,6 +159,13 @@ python3 main.py
     git checkout -b feature/quiz-play은 feature/quiz-play이라는 브랜치를 -b로 생성하고 checkout을 통해 브랜치로 이동하는 명령어입니다.</br> </br>
 
     git merge feature/quiz-play은 merge를 통해 현재 브랜치에 eature/quiz-play 브랜치 내용을 병합하는 명령어입니다.
+    </br> </br>
+
+    가지처럼 보이지 않는 이유는 다른 출발점에서 따로 커밋을 해야하는데 같은 출발 위치에서 출발했기 때문입니다.
+
+    ![quiz_list](./img/9/9-4.png)
+
+    git의 가지를 보여주기 위한 이미지입니다.
 
 11. clone / pull 실습
     프로젝트 완료 후 다음 과정을 수행하였습니다.
